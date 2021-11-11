@@ -32,14 +32,14 @@ if __name__ == "__main__":
         with open(chatbot, 'r', encoding=ENCODING) as data:
             builder = json.load(data)
         
-        for state in builder:
+        for state in builder["flow"]:
             if state == "onboarding":
                 continue
 
             if "desk:" in state:
                 continue
 
-            entering_custom_actions = builder[state]["$enteringCustomActions"]
+            entering_custom_actions = builder["flow"][state]["$enteringCustomActions"]
 
             for i in range(0, len(trackings['$enteringCustomActions'])):
                 if not has_tracking(name = trackings['$enteringCustomActions'][i]['$title'], entering_custom_actions = entering_custom_actions):
