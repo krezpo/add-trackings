@@ -1,0 +1,3 @@
+source_folder: "/home/germano/Code/blip/donna-bot/builder"
+destination_folder: "/home/germano/Code/blip/add-trackings/builder"
+trackings: "trackings.json"

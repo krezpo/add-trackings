@@ -1,0 +1,44 @@
+{
+	"$enteringCustomActions": [{
+		"$id": "06d43781-32fa-4f7a-a346-7d24b63c0f3e",
+		"$typeOfContent": "",
+		"type": "TrackEvent",
+		"$title": "[TRACKING] PRA ONDE FOI",
+		"$invalid": false,
+		"settings": {
+			"extras": {
+				"id": "{{contact.identity}}"
+			},
+			"category": "[{{state.previous.name}}] Pra onde foi",
+			"action": "{{state.name}}"
+		},
+		"conditions": []
+	}, {
+		"$id": "5b766e6a-17a8-4b70-b4c9-c707c5191d2c",
+		"$typeOfContent": "",
+		"type": "TrackEvent",
+		"$title": "[TRACKING] DE ONDE VEIO",
+		"$invalid": false,
+		"settings": {
+			"extras": {
+				"id": "{{contact.identity}}"
+			},
+			"category": "[{{state.name}}] De onde veio",
+			"action": "{{state.previous.name}}"
+		},
+		"conditions": []
+	}, {
+		"$id": "ddf0754b-23aa-4eef-938c-428d91412614",
+		"$typeOfContent": "",
+		"type": "TrackEvent",
+		"$title": "[TRACKING] HORA DE ACESSO",
+		"$invalid": false,
+		"settings": {
+			"extras": {
+				"id": "{{contact.identity}}"
+			},
+			"category": "[{{state.name}}] Hora de Acesso",
+			"action": "{{calendar.hour}}"
+		}
+	}]
+}
